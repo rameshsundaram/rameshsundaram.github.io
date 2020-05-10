@@ -831,11 +831,11 @@ $ vi themes/zafta/layouts/_default/single.html
             <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
             
             <guid>https://rameshsundaram.github.io/posts/2014/03/migrate-to-hugo-from-jekyll/</guid>
-            <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+            <description>Move static content to static Hugo has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/▾ images/logo.png should become
 ▾ &amp;lt;root&amp;gt;/▾ static/▾ images/logo.png Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
             <content type="html"><![CDATA[<h2 id="move-static-content-to-static">Move static content to <code>static</code></h2>
-<p>Jekyll has a rule that any directory not starting with <code>_</code> will be copied as-is to the <code>_site</code> output. Hugo keeps all static content under <code>static</code>. You should therefore move it all there.
+<p>Hugo has a rule that any directory not starting with <code>_</code> will be copied as-is to the <code>_site</code> output. Hugo keeps all static content under <code>static</code>. You should therefore move it all there.
 With Jekyll, something that looked like</p>
 <pre><code>▾ &lt;root&gt;/
     ▾ images/
