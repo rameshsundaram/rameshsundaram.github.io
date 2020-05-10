@@ -20,23 +20,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>Go</title>
-      <link>https://rameshsundaram.github.io/fr/categories/go/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://rameshsundaram.github.io/fr/categories/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jekyll</title>
-      <link>https://rameshsundaram.github.io/fr/categories/jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://rameshsundaram.github.io/fr/categories/jekyll/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
