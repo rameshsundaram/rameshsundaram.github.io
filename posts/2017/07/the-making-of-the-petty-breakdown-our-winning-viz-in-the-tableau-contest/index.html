@@ -148,7 +148,8 @@ Proud! And very thrilled!! But more importantly, we learned a few things along t
 <h3 id="the-viz">The Viz</h3>
 <p>The ask for the competition was quite simple. Tell us a story&hellip;through data&hellip;celebrating <a href="http://www.tompetty.com/?frontpage=true">Tom Petty</a>.</p>
 <p>And &hellip;here&rsquo;s our winning Viz.</p>
-<p><a href="http://public.tableau.com/profile/ramesh.sundaram1878#!/vizhome/TomPettyAnalysis-Moxie/HistoricalJourney"><img src="https://media-exp1.licdn.com/dms/image/C4E12AQHBkRlvBA6jYg/article-inline_image-shrink_1000_1488/0?e=1594857600&amp;v=beta&amp;t=UY6YPQwQzCt4-2aZEgkD4sNreUq96glclp-jaYHnlGU" alt=""></a></p>
+<iframe src = "https://public.tableau.com/views/TomPettyAnalysis-Moxie/HistoricalJourney?:showVizHome=no&amp;:embed=true" width="1020" height="900" width="100%" height="100%" style="border: 0px;" scrolling="yes"> </iframe>
+
 <h3 id="our-approach">Our Approach</h3>
 <p>There is no silver bullet to winning competitions but here are a few good practices for visualization problem solving&ndash;we think they might have helped us produce a quality viz and eventually win.</p>
 <ol>
@@ -174,10 +175,10 @@ Proud! And very thrilled!! But more importantly, we learned a few things along t
             'Authorization': &quot;Bearer {}&quot;.format(OATH_TOKEN)
         }
      return headers
-   
+
     # construct url
     url=base_api + artist_toptracks_endpoint.format(id=artist_id) + &quot;?country=US&quot;
-   
+
     request=urllib.request.Request(url,headers=get_Headers())
     # get response in json
     response=urllib.request.urlopen(request)    
