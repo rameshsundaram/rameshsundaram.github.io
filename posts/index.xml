@@ -48,10 +48,10 @@ Proud! And very thrilled!! But more importantly, we learned a few things along t
             'Authorization': &quot;Bearer {}&quot;.format(OATH_TOKEN)
         }
      return headers
-
+   
     # construct url
     url=base_api + artist_toptracks_endpoint.format(id=artist_id) + &quot;?country=US&quot;
-
+   
     request=urllib.request.Request(url,headers=get_Headers())
     # get response in json
     response=urllib.request.urlopen(request)    
@@ -107,8 +107,8 @@ lyrics = soup.find(&quot;div&quot;,{'class':'lyrics'})
 
 <h3 id="key-contributors-to-the-viz-project">Key contributors to the viz project:</h3>
 <ol>
-<li>Zack - <a href="https://www.linkedin.com/in/zackgruczkowski/" title="https://www.linkedin.com/in/zackgruczkowski/">https://www.linkedin.com/in/zackgruczkowski/</a></li>
-<li>John -<input disabled="" type="checkbox"> (http://%20https//www.linkedin.com/in/johntjacobson/)<a href="https://www.linkedin.com/in/johntjacobson/" title="https://www.linkedin.com/in/johntjacobson/">https://www.linkedin.com/in/johntjacobson/</a></li>
+<li><a href="https://www.linkedin.com/in/zackgruczkowski/">Zack Gruczkowski</a></li>
+<li><a href="https://www.linkedin.com/in/johntjacobson/">John Jacobson</a></li>
 </ol>
 ]]></content>
         </item>
