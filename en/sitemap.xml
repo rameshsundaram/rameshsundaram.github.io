@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://rameshsundaram.github.io/categories/</loc>
-    <lastmod>2017-07-07T20:00:00+00:00</lastmod>
+    <lastmod>2020-05-13T16:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -18,23 +18,38 @@
   </url>
   
   <url>
-    <loc>https://rameshsundaram.github.io/projects/</loc>
-    <lastmod>2017-07-07T20:00:00+00:00</lastmod>
+    <loc>https://rameshsundaram.github.io/tags/hugo/</loc>
+    <lastmod>2020-05-13T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rameshsundaram.github.io/categories/hugo/</loc>
+    <lastmod>2020-05-13T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rameshsundaram.github.io/posts/2020/05/hugo-and-embedding-tableau-viz-in-posts/</loc>
+    <lastmod>2020-05-13T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rameshsundaram.github.io/posts/</loc>
+    <lastmod>2020-05-13T16:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://rameshsundaram.github.io/tags/tableau/</loc>
-    <lastmod>2017-07-07T20:00:00+00:00</lastmod>
+    <lastmod>2020-05-13T16:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://rameshsundaram.github.io/categories/tableau/</loc>
-    <lastmod>2017-07-07T20:00:00+00:00</lastmod>
+    <lastmod>2020-05-13T16:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://rameshsundaram.github.io/tags/</loc>
-    <lastmod>2017-07-07T20:00:00+00:00</lastmod>
+    <lastmod>2020-05-13T16:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -48,22 +63,27 @@
   </url>
   
   <url>
+    <loc>https://rameshsundaram.github.io/tags/visualization/</loc>
+    <lastmod>2020-05-13T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rameshsundaram.github.io/categories/visualization/</loc>
+    <lastmod>2020-05-13T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rameshsundaram.github.io/projects/</loc>
+    <lastmod>2017-07-07T20:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rameshsundaram.github.io/projects/visualization/post4/</loc>
     <lastmod>2017-07-07T20:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://rameshsundaram.github.io/projects/visualization/</loc>
-    <lastmod>2017-07-07T20:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rameshsundaram.github.io/tags/visualization/</loc>
-    <lastmod>2017-07-07T20:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rameshsundaram.github.io/categories/visualization/</loc>
     <lastmod>2017-07-07T20:00:00+00:00</lastmod>
   </url>
   
@@ -97,10 +117,6 @@
   
   <url>
     <loc>https://rameshsundaram.github.io/projects/abtesting/</loc>
-  </url>
-  
-  <url>
-    <loc>https://rameshsundaram.github.io/posts/</loc>
   </url>
   
 </urlset>
