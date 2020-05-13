@@ -3,12 +3,67 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://rameshsundaram.github.io/posts/</loc>
+    <loc>https://rameshsundaram.github.io/categories/</loc>
+    <lastmod>2017-07-07T20:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://rameshsundaram.github.io/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rameshsundaram.github.io/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://rameshsundaram.github.io/projects/</loc>
     <lastmod>2017-07-07T20:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rameshsundaram.github.io/posts/2017/07/the-making-of-the-petty-breakdown-our-winning-viz-in-the-tableau-contest/</loc>
+    <loc>https://rameshsundaram.github.io/tags/tableau/</loc>
+    <lastmod>2017-07-07T20:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rameshsundaram.github.io/categories/tableau/</loc>
+    <lastmod>2017-07-07T20:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rameshsundaram.github.io/tags/</loc>
+    <lastmod>2017-07-07T20:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://rameshsundaram.github.io/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rameshsundaram.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://rameshsundaram.github.io/projects/visualization/post4/</loc>
+    <lastmod>2017-07-07T20:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rameshsundaram.github.io/projects/visualization/</loc>
+    <lastmod>2017-07-07T20:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rameshsundaram.github.io/tags/visualization/</loc>
+    <lastmod>2017-07-07T20:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rameshsundaram.github.io/categories/visualization/</loc>
     <lastmod>2017-07-07T20:00:00+00:00</lastmod>
   </url>
   
@@ -33,35 +88,19 @@
   </url>
   
   <url>
-    <loc>https://rameshsundaram.github.io/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://rameshsundaram.github.io/fr/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://rameshsundaram.github.io/categories/"
-                />
+    <loc>https://rameshsundaram.github.io/projects/forecasting/</loc>
   </url>
   
   <url>
-    <loc>https://rameshsundaram.github.io/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://rameshsundaram.github.io/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://rameshsundaram.github.io/tags/"
-                />
+    <loc>https://rameshsundaram.github.io/projects/nlp/</loc>
   </url>
   
   <url>
-    <loc>https://rameshsundaram.github.io/projects/</loc>
+    <loc>https://rameshsundaram.github.io/projects/abtesting/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rameshsundaram.github.io/posts/</loc>
   </url>
   
 </urlset>

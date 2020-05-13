@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="map[name:]">
+<meta name="description" content="A few weeks (er, maybe months) ago, Atlanta Tableau User Group (ATUG) announced a visualization contest. We, a core team of 3 from Moxie (Zack, John and myself) entered and we won. We also won tickets on the 15th row for the Tom Petty concert in Atlanta, and just a little bit of extra data viz street cred.
+Proud! And very thrilled!! But more importantly, we learned a few things along the way." />
+<meta name="keywords" content=", visualization, tableau" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://rameshsundaram.github.io/projects/visualization/post4/" />
+
+
+    <title>
+        
+            The making of the Petty Breakdown, our winning viz in the Tableau contest :: Ramesh Sundaram  — All things data
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://rameshsundaram.github.io/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://rameshsundaram.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://rameshsundaram.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://rameshsundaram.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://rameshsundaram.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://rameshsundaram.github.io/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://rameshsundaram.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="The making of the Petty Breakdown, our winning viz in the Tableau contest">
+<meta itemprop="description" content="A few weeks (er, maybe months) ago, Atlanta Tableau User Group (ATUG) announced a visualization contest. We, a core team of 3 from Moxie (Zack, John and myself) entered and we won. We also won tickets on the 15th row for the Tom Petty concert in Atlanta, and just a little bit of extra data viz street cred.
+Proud! And very thrilled!! But more importantly, we learned a few things along the way.">
+<meta itemprop="datePublished" content="2017-07-07T20:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-07-07T20:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="938">
+<meta itemprop="image" content="https://rameshsundaram.github.io/"/>
+
+
+
+<meta itemprop="keywords" content="visualization,tableau," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://rameshsundaram.github.io/"/>
+
+<meta name="twitter:title" content="The making of the Petty Breakdown, our winning viz in the Tableau contest"/>
+<meta name="twitter:description" content="A few weeks (er, maybe months) ago, Atlanta Tableau User Group (ATUG) announced a visualization contest. We, a core team of 3 from Moxie (Zack, John and myself) entered and we won. We also won tickets on the 15th row for the Tom Petty concert in Atlanta, and just a little bit of extra data viz street cred.
+Proud! And very thrilled!! But more importantly, we learned a few things along the way."/>
+
+
+
+
+
+    <meta property="article:section" content="visualization" />
+
+    <meta property="article:section" content="tableau" />
+
+
+
+    <meta property="article:published_time" content="2017-07-07 20:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://rameshsundaram.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://rameshsundaram.github.io/about/">About</a></li><li><a href="https://rameshsundaram.github.io/posts/">Posts</a></li><li><a href="https://rameshsundaram.github.io/projects/">Projects</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://rameshsundaram.github.io/projects/visualization/post4/">The making of the Petty Breakdown, our winning viz in the Tableau contest</a></h2>
+
+            
+
+            <div class="post-content">
+                <p><img src="https://media-exp1.licdn.com/dms/image/C4E12AQGeA1Zw2lRqGA/article-inline_image-shrink_1000_1488/0?e=1594857600&amp;v=beta&amp;t=WbON3XCJNRl-9jMYZmP63cFYj3-tVli3O0K6AVMbRsg" alt=""></p>
+<p>A few weeks (er, maybe months) ago, Atlanta Tableau User Group (ATUG) announced a visualization contest. We, a core team of 3 from <a href="https://moxieusa.com/">Moxie</a> (<a href="https://www.linkedin.com/in/zackgruczkowski/">Zack</a>, <a href="https://www.linkedin.com/in/johntjacobson/">John</a> and myself) entered and we won. We also won tickets on the 15th row for the Tom Petty concert in Atlanta, and just a little bit of extra data viz street cred.</p>
+<p>Proud! And very thrilled!! But more importantly, we learned a few things along the way. Here, I want to share our approach presenting some technical details which might be hopefully helpful for a few.</p>
+<h3 id="the-viz">The Viz</h3>
+<p>The ask for the competition was quite simple. Tell us a story&hellip;through data&hellip;celebrating <a href="http://www.tompetty.com/?frontpage=true">Tom Petty</a>.</p>
+<p>And &hellip;here&rsquo;s our winning Viz.</p>
+<iframe src = "https://public.tableau.com/views/TomPettyAnalysis-Moxie/HistoricalJourney?:showVizHome=no&amp;:embed=true" width="1020" height="900" width="100%" height="100%" style="border: 0px;" scrolling="yes"> </iframe>
+
+<h3 id="our-approach">Our Approach</h3>
+<p>There is no silver bullet to winning competitions but here are a few good practices for visualization problem solving&ndash;we think they might have helped us produce a quality viz and eventually win.</p>
+<ol>
+<li>Ask good questions</li>
+<li>Identify, collect, and prepare data</li>
+<li>Make rough (but thoughtful) sketches</li>
+<li>Prototype (fast)</li>
+<li>Get feedback and repeat</li>
+</ol>
+<h3 id="ask-good-questions">Ask good questions</h3>
+<p>It may be tempting to launch Tableau (or your favorite viz tool) and start tinkering with ideas you have had. We did some of that, but try your best to resist! Find friends or colleagues who might know a thing or two about the subject to see what might be interesting/useful first. The more time you spend carefully thinking about what you want your viz to answer or convey, the less time you need to commit on course correction. One word of caution, as the questions start to flow, start thinking about data sources. Simple Google searches would suffice. This will keep the ideas balanced with the reality of data availability.</p>
+<p>Lucky for us, we had a couple of musically inclined and talented folks in the team. They knew a lot more about Tom Petty than I did and brought a lot of very interesting questions. We settled on studying the relationship of musical and lyrical attributes to popularity.</p>
+<h3 id="identify-collect-and-prepare-data">Identify, collect and prepare data</h3>
+<p>After some research, we discovered that <a href="https://www.spotify.com/us/">Spotify </a>had rich data on musicality and popularity scores which they expose conveniently through the <a href="https://developer.spotify.com/web-api/">Spotify Web API</a>. And, we chose to use <a href="https://genius.com/">Genius </a>for our lyrics, though there are plenty of other sources.</p>
+<p>Data sourcing, cleaning and preparation takes a good 60% of a typical successful analytics project. Though that 60% can be fast-tracked with the proper use of scripting languages.</p>
+<p>Spotify Web API exposes a REST API and you need a Spotify account and an authorization token to source data from the various <a href="https://developer.spotify.com/web-api/endpoint-reference/">endpoints</a>. We are largely a Python shop and love using it for sourcing and prepping data. There are many helpful libraries in Python, and here are a few examples that we used:</p>
+<ol>
+<li>
+<p><a href="https://docs.python.org/3/library/urllib.html">urllib </a>- to post http requests and read responses.</p>
+<pre><code>    def get_Headers():
+        headers = {
+            'Accept': 'application/json',
+            'Authorization': &quot;Bearer {}&quot;.format(OATH_TOKEN)
+        }
+     return headers
+
+    # construct url
+    url=base_api + artist_toptracks_endpoint.format(id=artist_id) + &quot;?country=US&quot;
+
+    request=urllib.request.Request(url,headers=get_Headers())
+    # get response in json
+    response=urllib.request.urlopen(request)    
+    data = json.loads(response.read())  
+</code></pre>
+</li>
+</ol>
+<p>2. <a href="http://pandas.pydata.org/">pandas </a>- to manage the data structures as a table, a helpful library to get the right data format to feed to Tableau. For example, the results you&rsquo;ll get from this api is in json format. Pandas&rsquo; &ldquo;json_normalize&rdquo; method does some miracles under the hood and saves you a ton of time.</p>
+<pre><code>    for track in data['tracks']:        
+        result = json_normalize(track)
+        # do something to manage the data for multiple tracks
+</code></pre>
+<p>3. <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a> - A great library for scraping and extracting data from DOM elements. If you inspect the webpage to see where your lyrical content is, then it is a few lines of code (at most) to get what you want.</p>
+<pre><code>soup = BeautifulSoup(requests.get(lyrics_url).text)
+lyrics = soup.find(&quot;div&quot;,{'class':'lyrics'})
+</code></pre>
+<p>4. <a href="http://www.nltk.org/">nltk</a> - There are several advanced use cases for this library. We used it for some getting word counts, words per sentence, phrases etc. We also compute a custom metric from the lyrics called lexical diversity which is a measure of richness of the language in the lyrics.</p>
+<pre><code>def extract_lexical_info(raw_text):
+    if(pd.isnull(raw_text)):
+        return (0,&quot;NA&quot;);
+    else:        
+        word_tokens=nltk_helper.word_tokenize(raw_text, remove_stop=False)        
+        word_tokens_wo_stop=nltk_helper.word_tokenize(raw_text, remove_stop=True)        
+        nltk_text=nltk.Text(word_tokens)
+        nltk_text_wo_stop=nltk.Text(word_tokens_wo_stop)
+        
+        word_count=len(word_tokens)    
+        word_count
+        lexical_diversity=nltk_helper.lexical_diversity(nltk_text)
+        return (word_count, lexical_diversity)
+</code></pre>
+<h3 id="make-sketches">Make sketches</h3>
+<p><img src="https://media-exp1.licdn.com/dms/image/C4E12AQFlQqJZUf4i6A/article-inline_image-shrink_1000_1488/0?e=1594857600&amp;v=beta&amp;t=LKrcYDMPwS0idF_v32XQt1WdJzKaMOdmgfLI8oPxnTA" alt=""></p>
+<p>Things you need:</p>
+<ol>
+<li>An open mind</li>
+<li>Few sheets of paper and a pen</li>
+<li>Whatever else that will get your creative juices going</li>
+<li>Plenty of persistence when your ideas hit a wall</li>
+</ol>
+<p>At this point, there will likely be a few ideas that seem unrealistic. Our suggestion is to not worry too much about implementation yet. This is the time to push boundaries.</p>
+<h3 id="prototype-fast">Prototype (fast)</h3>
+<p><img src="https://media-exp1.licdn.com/dms/image/C4E12AQGrGdvlZS0VAA/article-inline_image-shrink_1000_1488/0?e=1594857600&amp;v=beta&amp;t=RJe4s3RRRNIMzltor8uJallscMNWiDm0UXSmlV9EVBk" alt=""></p>
+<p>Iterate fast in getting some of the ideas to life. From time to time you&rsquo;ll need to do some Tableau research on the web. There are plenty of resources - we follow <a href="http://www.vizwiz.com/">Andy Kriebel</a>. And the people who follow him and people he follows. One of the videos that helped clean up a lot of our vizzes is <a href="https://www.youtube.com/watch?v=boJcT-lerFQ">50 Viz in 50 mins</a>. Your local Tableau community is always helpful.</p>
+<h3 id="get-feedback-and-iterate">Get feedback and iterate</h3>
+<p>Bring a colleague or friend to your desk, tell them what you are trying to do and show them what you have. Listen carefully to what they have to say. Incorporate their feedback when reasonable and iterate. This didn&rsquo;t stop for us until we had to turn in our final viz. It&rsquo;s even better to find someone who doesn&rsquo;t normally work in data on a daily basis&ndash;this helps you keep user experience in mind.</p>
+<h3 id="our-success">Our success</h3>
+<p>Tableau&rsquo;s CMO and CDO were too kind to say a few nice words about our Viz. This is definitely a great recognition for us as we continue to push the boundaries.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/T-Bazhb9XSk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h3 id="key-contributors-to-the-viz-project">Key contributors to the viz project:</h3>
+<ol>
+<li><a href="https://www.linkedin.com/in/zackgruczkowski/">Zack Gruczkowski</a></li>
+<li><a href="https://www.linkedin.com/in/johntjacobson/">John Jacobson</a></li>
+</ol>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://rameshsundaram.github.io/tags/visualization">visualization</a></span><span class="tag"><a href="https://rameshsundaram.github.io/tags/tableau">tableau</a></span>
+  				</p>
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://rameshsundaram.github.io/">Ramesh Sundaram</a></span>
+            
+            
+            <span> <a href="https://rameshsundaram.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://rameshsundaram.github.io/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
+
+
+
+    </body>
+</html>
