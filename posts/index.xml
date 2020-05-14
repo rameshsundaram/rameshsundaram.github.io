@@ -39,7 +39,7 @@ There are tons and tons of resources for how to do that and below are a couple o
 <p>The shortcode I created for embedding is a simple <em>iframe</em> with a link to the source.</p>
 <pre><code>&lt;iframe src = &quot;{{.Get 0}}&quot; width=&quot;1020&quot; height=&quot;900&quot; width=&quot;100%&quot; height=&quot;100%&quot; style=&quot;border: 0px;&quot; scrolling=&quot;yes&quot;&gt; &lt;/iframe&gt;
 </code></pre>
-<p>Save this snippet of code in a tableau.html in your themes/<!-- raw HTML omitted -->/layouts/shortcodes/</p>
+<p>Save this snippet of code in a tableau.html in your themes/<!-- raw HTML omitted -->/layouts/shortcodes/ and you are done.</p>
 ]]></content>
         </item>
         
